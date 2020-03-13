@@ -20,9 +20,9 @@ import {
 class ScoreTable extends Component {
 	getTotalScore() {
 		const { scores } = this.props;
-		let totalScore = -;
+		let totalScore = 0;
 		for (let key in scores) {
-			if(scores[key]) totalScore += scores[key];
+			if (scores[key]) totalScore += scores[key];
 		}
 		return totalScore;
 	}
@@ -123,7 +123,7 @@ class ScoreTable extends Component {
 						</tbody>
 					</table>
 				</section>
-				<h2>TOTAL SCORE: {this.getTotalScore}</h2>
+				<h2>TOTAL SCORE: {this.getTotalScore()}</h2>
 			</div>
 		);
 	}
